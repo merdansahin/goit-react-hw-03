@@ -13,20 +13,26 @@ input {
   padding: 6px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  outline: none;
 }
 
-button {
+.button {
   margin-top: 10px;
+  margin-left: 0px;
   padding: 8px;
   background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 6px;
+  outline: none;
 }
 
-button:hover {
+.button:hover,
+.button:focus {
   background-color: #45a049;
+  outline: none;
+  border: none;
 }
 
 span {

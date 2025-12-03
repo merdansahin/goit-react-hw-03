@@ -28,17 +28,19 @@ export default function App() {
     setContacts((prev) => [...prev, newContact]);
   };
   const deleteContact = (id) => {
-    setContacts((prev) => prev.filter(({ c }) => c.id !== id));
+    setContacts((prev) => prev.filter((contact) => contact.id !== id));
   };
   const visibleContacts = contacts.filter((c) =>
     c.name.toLowerCase().includes(filter.toLowerCase())
   );
   return (
-    <div className={styles.container}>
-      <h1>Phonebook</h1>
-      <ContactForm onAdd={addContact} />
-      <SearchBox value={filter} onChange={setFilter} />
+    <>
+      <div className={styles.container}>
+        <h1>Phonebook</h1>
+        <ContactForm onAdd={addContact} />
+        <SearchBox value={filter} onChange={setFilter} />
+      </div>
       <ContactList contacts={visibleContacts} onDeleteContact={deleteContact} />
-    </div>
+    </>
   );
 }

@@ -26,13 +26,15 @@ export default function ContactForm({ onAdd }) {
       <Form className={styles.form}>
         <label>Name</label>
         <Field name="name" />
-        <ErrorMessage name="name" />
+        <ErrorMessage name="name" component="span" />
 
         <label>Number</label>
         <Field name="number" />
-        <ErrorMessage name="number" />
+        <ErrorMessage name="number" component="span" />
 
-        <button type="submit">Add Contact</button>
+        <button type="submit" className={styles.button}>
+          Add Contact
+        </button>
       </Form>
     </Formik>
   );
